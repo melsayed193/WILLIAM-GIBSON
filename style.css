@@ -1,0 +1,166 @@
+/* SITE: WILLIAM GIBSON */
+
+@font-face {
+  font-family: SpionVerp;
+  src: url(Font/SpionVerpflanzung.otf);
+}
+
+/* BASE */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Nunito";
+  color: black;            /* Your main text color */
+  background-color: white; /* Your main background color */
+}
+
+img {
+  vertical-align: middle;
+  margin: 0px 361px 0px 176px;
+    max-width: 20%;
+}
+main {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 3em;
+  margin: 0;
+}
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+  padding: 5em 0.25em 0.25em 0.25em;
+  width: 100vw;
+  height: 3em;
+  top: 0;
+  left: 0;
+  text-align: right;
+  height: 6em;
+  transform: translateY(-6em);
+  opacity: 0;
+  transition: transform 0.3s;
+}
+.nav-active nav {
+  opacity: 1;
+  transform: translateY(0);
+}
+.menu-toggle {
+  background-image: url(images/menu.svg);
+  height: 88px;
+  width: 70px;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  cursor: pointer;
+}
+nav a {
+  display: block;
+ text-align: left;
+  padding: 3em 0em 0em 2.4em;
+}
+
+
+/* TYPOGRAPHY */
+a {
+  text-decoration: none;
+  color: #282828;
+  font-family: "Nunito", bold;
+  font-size: 17px;
+             /* Your main link color */
+}
+p {
+  margin: 34px 134px 0em 406px;
+  max-width: 40em;
+}
+h1 {
+    font-family: SpionVerp, sans-serif; /* Your main typeface */
+    text-transform: uppercase;
+    font-size: 171px;
+    margin-left: 187px;
+    margin-top: -5px;
+    margin-bottom:-160px;
+
+}
+h2 {
+  margin: 46px 50px 43px 557px;
+
+}
+h3 {
+
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+
+
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.column {
+  width: 100%;
+  padding: 0.25em;
+}
+
+
+
+
+
+/* 
+  Delete this comment! This space is where you will be adding 
+  in styles for your own custom modules, classes, and whatever
+  else you may need!
+/*
+  
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 40em) {
+  .column {
+    width: 50%;
+  }
+}
+/* Include any other media queries you may need here! */
+
+
+
