@@ -26,8 +26,8 @@ body {
 
 img {
   vertical-align: middle;
-  margin: 0px 361px 0px 176px;
-    max-width: 20%;
+  max-width: 100%;
+  height: auto;
 }
 main {
   display: block;
@@ -53,8 +53,9 @@ section {
 
 /* NAVIGATION */
 nav {
+  background-image: url(images/menu opened.svg);
   position: fixed;
-  z-index: 1;
+  z-index: 99;
   margin: 0;
   padding: 5em 0.25em 0.25em 0.25em;
   width: 100vw;
@@ -63,7 +64,7 @@ nav {
   left: 0;
   text-align: right;
   height: 6em;
-  transform: translateY(-6em);
+  transform: translateY(-100vh);
   opacity: 0;
   transition: transform 0.3s;
 }
@@ -80,13 +81,30 @@ nav {
   left: 2em;
   cursor: pointer;
 }
+.nav-active .menu-toggle {
+  background-image: url(images/menu-opened.svg);
+  min-height: 100vh;
+  width: 217px;
+  margin-left: -77px;
+  position: fixed;
+}
 nav a {
   display: block;
  text-align: left;
-  padding: 3em 0em 0em 2.4em;
+  padding: 3rem 0rem 0rem 2.4rem;
 }
-
-
+.info-active-page {
+font-size: 80px;
+font-weight: bold;
+}
+ .books-active-page{
+font-size: 80px;
+font-weight: bold;
+  }
+ .home-active-page{
+font-size: 80px;
+font-weight: bold;
+  }
 /* TYPOGRAPHY */
 a {
   text-decoration: none;
@@ -95,6 +113,10 @@ a {
   font-size: 17px;
              /* Your main link color */
 }
+.year{
+  font-size: 14px;
+  text-align: right;
+}
 p {
   margin: 34px 134px 0em 406px;
   max-width: 40em;
@@ -102,17 +124,30 @@ p {
 h1 {
     font-family: SpionVerp, sans-serif; /* Your main typeface */
     text-transform: uppercase;
-    font-size: 171px;
-    margin-left: 187px;
-    margin-top: -5px;
-    margin-bottom:-160px;
-
+    font-size: 36px;
+    margin-left: 147px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+h1 img {
+  margin: 0px 0px 0px 20px;
+  max-width: 180px;
+  min-width: 180px;
+}
+.home h1 img {
+  margin: 0px auto;
+  max-width: 180px;
+  min-width: 180px;
 }
 h2 {
+  font-size: 30px;
   margin: 46px 50px 43px 557px;
 
 }
 h3 {
+  text-align: right;
+  margin: 166px 676px 0px 0px;
+  font-size: 38px;
 
 }
 h4 {
@@ -123,6 +158,9 @@ h5 {
 }
 h6 {
 
+}
+.not-bold {
+  font-weight: normal;
 }
 
 
@@ -141,12 +179,6 @@ h6 {
 
 
 
-/* 
-  Delete this comment! This space is where you will be adding 
-  in styles for your own custom modules, classes, and whatever
-  else you may need!
-/*
-  
 
 
 
@@ -158,6 +190,15 @@ h6 {
 @media (min-width: 40em) {
   .column {
     width: 50%;
+  }
+  h1 {
+    font-size: 130px;
+    margin-left: 147px;
+  }
+  .home h1 img {
+    margin: 0px 361px 0px 176px;
+    max-width: 470px;
+    min-width: 180px;
   }
 }
 /* Include any other media queries you may need here! */
